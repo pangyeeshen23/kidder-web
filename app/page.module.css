@@ -1,77 +1,23 @@
-
-.heroBackground
-{
-    background-image: url("/img/hero-image.jpg");
-    background-size: cover;
-    background-position: center;
+.heroBackground {
+  background-image: url("/img/hero-image.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
-.bigCloud
-{
-    width: 50%;
-    right: 1%;
-    bottom: 10px;
+.barriecitoFont {
+  font-family: "Barriecito", cursive;
 }
 
-.bigCloudTwo
-{
-    width: 35%;
-    right: 0%;
-    bottom: 0%;
+.title::after {
+  position: relative;
+  display: inline-block;
 }
 
-.heroTitle
-{
-    font-family: 'Barriecito', cursive;
-}
-
-.sun
-{
-    width: 20%;
-    left: 20%;
-    top: 10%;
-}
-
-.smallCloud
-{
-    width: 35%;
-    left: 1%;
-    top: 50%;
-}
-
-.smallCloudTwo
-{
-    width: 45%;
-    left: 8%;
-    top: 50%;
-}
-
-.smallCloudThree
-{
-    width: 25%;
-    left: 0%;
-    bottom: 0%;
-}
-
-.skyText
-{
-    z-index: 2;
-    font-weight: bold;
-}
-
-.smallRainbow
-{
-    width: 20%;
-    right: 20%;
-    top: 100px;
-    rotate: 20deg;
-}
-
-
-.sun
-{
-    width: 20%;
-    left: 20%;
-    top: 100px;
-    rotate: -10deg;
+.title::after {
+  content: "";
+  display: flex;
+  left: 0;
+  height: 4px;
+  background-color: #ff7a00;
+  border-radius: 2px;
 }

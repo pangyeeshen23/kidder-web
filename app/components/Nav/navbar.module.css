@@ -1,4 +1,12 @@
-.link
-{
-    font-family: 'Barriecito', cursive;
+.link {
+  font-family: "Barriecito", cursive;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 40px;
+  overflow: hidden;
+  z-index: 1000;
 }
