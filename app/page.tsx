@@ -92,7 +92,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="flex justify-center relative pb-15">
+            <div className="flex justify-center relative pb-20">
               <img
                 src="/img/kindergarden-intro-1.jpg"
                 alt="Kindergarten Introduction"
