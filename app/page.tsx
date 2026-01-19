@@ -107,6 +107,18 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className="min-h-screen bg-yellow-50  py-16">
+        <div className="w-full h-full flex flex-col justify-center items-center">
+          <div className="mt-20 grid grid-cols-2 gap-4 px-16">
+            <h2
+              className={`text-4xl font-semibold mb-8 ${styles.barriecitoFont} ${styles.title} text-black`}
+            >
+              Facilities
+            </h2>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
