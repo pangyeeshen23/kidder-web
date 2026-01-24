@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useRef } from 'react';
+import Image from 'next/image';
 import gsap from 'gsap';
 import { SplitText } from 'gsap/SplitText';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -151,6 +152,16 @@ export default function Home() {
                   </span>
                 </div>
               ))}
+            </div>
+            <div className="flex align-items-center mx-4 max-[500px]:ml-4 sm:ml-8 mt-4 mb-8">
+              <div className="flex space-x-3">
+                <button className="w-10 h-10 bg-zinc-400/20 backdrop-blur-sm hover:bg-white/30 rounded-full flex items-center justify-center transition-all duration-300 opacity-50 cursor-not-allowed">
+                  <img src="/img/svg/nav-left.svg" alt="Previous" width={16} height={16} />
+                </button>
+                <button className="w-10 h-10 bg-zinc-400/20 backdrop-blur-sm hover:bg-white/30 rounded-full flex items-center justify-center transition-all duration-300 opacity-100">
+                  <img src={'/img/svg/nav-right.svg'} alt="Next" width={16} height={16} />
+                </button>
+              </div>
             </div>
           </div>
         </div>
