@@ -124,7 +124,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="min-h-screen bg-white-50  py-16">
+      <section className="relative w-full overflow-hidden pt-32 pb-8 bg-dark svelte-hb5zro">
         <div className="w-full h-full flex flex-col justify-center items-center">
           <div className="mt-20 px-16">
             <h2
@@ -133,22 +133,26 @@ export default function Home() {
               Facilities
             </h2>
           </div>
-          <Carousel>
-            {facilities.map((facility) => (
-              <SwiperSlide>
-                <div className="flex flex-col">
+          <div className="relative w-full overflow-hidden mt-10">
+            <div
+              className=" flex will-change-transform ml-4 max-[500px]:ml-4 sm:ml-8 justify-start"
+              role="region"
+              aria-label="video carousel"
+            >
+              {facilities.map((facility) => (
+                <div className="relative shrink-0 w-[calc(100vw-2rem)] max-[500px]:w-[calc(100vw-2.5rem)] max-[500px]:mr-2.5 sm:w-[calc(100vw-10rem)] lg:w-[60vw] aspect-1440/920 mr-6 last:mr-0">
                   <img
                     src="/img/facilities/modern-classroom.jpg"
                     alt="Modern Classrooms"
-                    className="w-full h-48 object-cover"
+                    className="w-full h-full object-cover object-top rounded-lg"
                   ></img>
                   <span className={`text-center text-2xl text-black ${styles.barriecitoFont}`}>
                     Modern Classrooms
                   </span>
                 </div>
-              </SwiperSlide>
-            ))}
-          </Carousel>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
     </div>
