@@ -4,6 +4,8 @@ import gsap from 'gsap';
 import { SplitText } from 'gsap/SplitText';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import styles from './page.module.css';
+import Carousel from './components/Carousel/carousel';
+import { SwiperSlide } from 'swiper/react';
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(SplitText);
@@ -11,6 +13,20 @@ gsap.registerPlugin(SplitText);
 export default function Home() {
   const mainTitle = useRef(null);
   const buttonRef = useRef(null);
+
+  const facilityCarousel = useRef(null);
+
+  const facilities = [
+    { id: 'facilities1', label: 'Modern Classroom', image: '/img/facilities/modern-classroom.jpg' },
+    {
+      id: 'facilities2',
+      label: 'Outdoor Playground',
+      image: '/img/facilities/outdoor-playground.jpg',
+    },
+    { id: 'facilities3', label: 'Library', image: '/img/facilities/library.jpg' },
+    { id: 'facilities4', label: 'Dinning Area', image: '/img/facilities/dinning-area.jpg' },
+    { id: 'facilities5', label: 'STEM', image: '/img/facilities/stem-corner.jpg' },
+  ];
 
   useEffect(() => {
     let split = new SplitText(mainTitle.current, { type: 'words,chars' });
@@ -108,15 +124,31 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="min-h-screen bg-yellow-50  py-16">
+      <section className="min-h-screen bg-white-50  py-16">
         <div className="w-full h-full flex flex-col justify-center items-center">
-          <div className="mt-20 grid grid-cols-2 gap-4 px-16">
+          <div className="mt-20 px-16">
             <h2
               className={`text-4xl font-semibold mb-8 ${styles.barriecitoFont} ${styles.title} text-black`}
             >
               Facilities
             </h2>
           </div>
+          <Carousel>
+            {facilities.map((facility) => (
+              <SwiperSlide>
+                <div className="flex flex-col">
+                  <img
+                    src="/img/facilities/modern-classroom.jpg"
+                    alt="Modern Classrooms"
+                    className="w-full h-48 object-cover"
+                  ></img>
+                  <span className={`text-center text-2xl text-black ${styles.barriecitoFont}`}>
+                    Modern Classrooms
+                  </span>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Carousel>
         </div>
       </section>
     </div>
